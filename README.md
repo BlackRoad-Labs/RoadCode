@@ -1,49 +1,58 @@
 # BlackRoad-Labs — RoadCode
 
-> Research division of [BlackRoad OS, Inc.](https://github.com/BlackRoad-OS-Inc)
+> R&D & Experiments division of [BlackRoad OS, Inc.](https://github.com/BlackRoad-OS-Inc)
 
-Quantum computing, mathematical research, experiments, Amundson framework.
+Where new ideas get tested before promotion to production orgs. Prototypes, experiments, benchmarks, and proof-of-concepts. If it works here, it graduates to the right division.
 
-## Connection to BlackRoad-OS-Inc
+## What Lives Here
+
+| Category | Examples |
+|----------|---------|
+| **Protocol Experiments** | BlackBox Protocol (Tor/IPFS/BitTorrent/WebRTC mesh) |
+| **Benchmark Suites** | BlackRoad vs NVIDIA inference benchmarks |
+| **New Agent Patterns** | Multi-agent coordination, debate protocols |
+| **Ternary Computing** | Ternary routing: 1=arrived, 0=waiting, -1=already answered |
+| **Math Validation** | Amundson Framework edge cases + stress tests |
+
+## Current Experiments
+
+- **BlackBox Protocol**: Multi-network mesh tested at 7 nodes, 5 protocols, 2.19s round-trip
+- **Ternary routing**: -1 cancels redundant paths, reduces fleet chatter
+- **NATS mesh**: v2.12.3 live, 4/5 nodes connected, pub/sub agent coordination
+- **RAG pipeline**: Qdrant + nomic-embed-text for academic citation + moral context
+
+## Org Hierarchy
 
 ```
-BlackRoad-OS-Inc (Parent — Data Layer)
-  └── BlackRoad-Labs (Research)
-      └── RoadCode (this repo — workspace + automation)
+BlackRoad-OS-Inc (Parent — 254 repos, 67 agents, 7 nodes)
+  └── BlackRoad-Labs (R&D & Experiments)
+      ├── RoadCode          ← this repo (workspace + automation)
+      ├── operator           ← CLI tools + experiment runners
+      └── source             ← prototype code + benchmarks
 ```
 
-- **Parent Org**: [BlackRoad-OS-Inc](https://github.com/BlackRoad-OS-Inc)
-- **Master RoadCode**: [BlackRoad-OS-Inc/RoadCode](https://github.com/BlackRoad-OS-Inc/RoadCode)
-- **Operator**: [BlackRoad-OS-Inc/blackroad-operator](https://github.com/BlackRoad-OS-Inc/blackroad-operator)
-- **Domain**: [blackroadquantum.com](https://blackroadquantum.com)
-- **Repos in this org**: 14
+## Graduation Path
 
-## Role
+```
+Labs (experiment) → Foundation (validate) → Production org (ship)
+```
 
-| Property | Value |
-|----------|-------|
-| **Division** | Research |
-| **Parent** | BlackRoad-OS-Inc |
-| **Governance** | [Cece Protocol](https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ORG-MAP.md) |
-| **License** | Proprietary — BlackRoad OS, Inc. |
+Experiments that prove out move to:
+- [BlackRoad-AI](https://github.com/BlackRoad-AI) for model/inference work
+- [BlackRoad-Cloud](https://github.com/BlackRoad-Cloud) for infrastructure patterns
+- [BlackRoad-Security](https://github.com/BlackRoad-Security) for security protocols
+- [BlackRoad-Interactive](https://github.com/BlackRoad-Interactive) for game/3D tech
 
-## RoadCode Standard
+## How It Connects
 
-Every BlackRoad org follows the RoadCode standard:
-- `RoadCode/` repo = workspace + automation hub
-- `.github/` repo = org profile + shared workflows
-- `operator/` repo = CLI tools + bootstrap scripts
-- `source/` repo = canonical source tree
+- **Parent**: [BlackRoad-OS-Inc](https://github.com/BlackRoad-OS-Inc) — central coordination
+- **Foundation**: [BlackRoad-Foundation](https://github.com/BlackRoad-Foundation) — mathematical validation
+- **Hardware**: [BlackRoad-Hardware](https://github.com/BlackRoad-Hardware) — experiments run on the Pi fleet
 
-All orgs report to **BlackRoad-OS-Inc** as the central coordination layer.
+## License
 
-## Quick Links
-
-- [Master ORG-MAP](https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ORG-MAP.md)
-- [Master TODO](https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/TODO.md)
-- [Master ROADMAP](https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ROADMAP.md)
-- [All Domain Repos](https://github.com/orgs/BlackRoad-OS-Inc/repositories)
+Proprietary — BlackRoad OS, Inc. See [LICENSE](./LICENSE).
 
 ---
 
-**Proprietary Software — BlackRoad OS, Inc.**
+*Remember the Road. Pave Tomorrow.*
